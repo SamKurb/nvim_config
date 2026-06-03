@@ -10,5 +10,11 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.expandtab = true
 
+--=== [KEYMAPS] ===--
+
+-- Oil --
 vim.keymap.set("n", "<leader>de", "<CMD>Oil<CR>", { desc = "Open Oil directory editor" })
 
+-- FzfLua --
+vim.keymap.set("n", "<leader>ff", "<CMD>FzfLua grep<CR>", { desc = "grep filenames using FzfLua "})
+vim.keymap.set("n", "<leader>fg", "<CMD>FzfLua live_grep<CR>", { desc = "grep file contents using FzfLua" } )
