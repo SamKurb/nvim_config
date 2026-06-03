@@ -19,3 +19,14 @@ vim.keymap.set("n", "<leader>de", "<CMD>Oil<CR>", { desc = "Open Oil directory e
 -- FzfLua --
 vim.keymap.set("n", "<leader>ff", "<CMD>FzfLua grep<CR>", { desc = "grep filenames using FzfLua "})
 vim.keymap.set("n", "<leader>fg", "<CMD>FzfLua live_grep<CR>", { desc = "grep file contents using FzfLua" } )
+
+-- Incremental Select --
+vim.keymap.set({ "n", "x" }, "<Enter>", "van", {
+  remap = true,
+  desc = "Expand selection",
+})
+
+vim.keymap.set("x", "<Backspace>", "in", {
+  remap = true,
+  desc = "Shrink selection",
+})
