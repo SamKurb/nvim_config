@@ -1,4 +1,5 @@
 require("config.lazy")
+--require("lsp.lsp_setup")
 
 vim.g.mapleader = " "
 vim.o.clipboard = "unnamedplus"
