@@ -6,7 +6,9 @@ return
       "clangd",
       "lua_ls",
       "pyright",
-      "roslyn_ls"
+      "roslyn_ls",
+      "neocmake",
+      "marksman",
     }
   },
   

@@ -1,7 +1,7 @@
 require("config.lazy")
 require("keymaps.oil_keymaps")
 require("keymaps.fzf_keymaps")
-require("keymaps.base_keymaps")
+require("keymaps.lsp_keymaps")
 require("visual.base_visuals")
 --require("lsp.lsp_setup")
 
@@ -16,3 +16,14 @@ vim.opt.expandtab = true
 
 -- Stores undo history accross sessions
 vim.opt.undofile = true
+vim.cmd("colorscheme kanagawa-dragon")
+vim.lsp.inlay_hint.enable(true)
+
+vim.diagnostic.config({
+  virtual_text = {
+    spacing = 2,
+    prefix = "●",
+  },
+  underline = true,
+})
+
