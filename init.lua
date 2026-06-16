@@ -19,6 +19,7 @@ vim.opt.undofile = true
 vim.cmd("colorscheme kanagawa-dragon")
 vim.lsp.inlay_hint.enable(true)
 
+
 vim.diagnostic.config({
   virtual_text = {
     spacing = 2,
