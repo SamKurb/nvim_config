@@ -26,7 +26,7 @@ return
     -- C-k: Toggle signature help (if signature.enabled = true)
     --
     -- See :h blink-cmp-config-keymap for defining your own keymap
-    keymap = { 
+    keymap = {
       preset = 'default',
       ["<C-d>"] = { "show_documentation", "hide_documentation", "fallback" },
       ["<C-b>"] = { "scroll_documentation_up", "fallback" },

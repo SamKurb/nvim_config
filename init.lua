@@ -14,17 +14,28 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.expandtab = true
 
--- Stores undo history accross sessions
+
+-- S--[[ tores  ]]undo history accross sessions
 vim.opt.undofile = true
 vim.cmd("colorscheme kanagawa-dragon")
 vim.lsp.inlay_hint.enable(true)
 
-
 vim.diagnostic.config({
-  virtual_text = {
+virtual_text = {
     spacing = 2,
-    prefix = "●",
+    -- prefix = "●",
+    signs = true,
   },
-  underline = true,
 })
 
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = '*',
+  callback = function(ev)
+    local ft = vim.bo[ev.buf].filetype
+    local lang = vim.treesitter.language.get_lang(ft)
+
+    if lang and vim.treesitter.language.add(lang) then
+      vim.treesitter.start(ev.buf, lang)
+    end
+  end,
+})

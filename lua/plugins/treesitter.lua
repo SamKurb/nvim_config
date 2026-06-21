@@ -14,6 +14,7 @@ return
       "vim",
       "vimdoc",
       "python",
+      "cmake"
     })
   end,
 }

@@ -14,7 +14,7 @@ vim.keymap.set("n", "gf", vim.lsp.buf.declaration, {
   desc = "Go to declaration"
 })
 
-vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format, {
+vim.keymap.set("n", "<S-F><S-F>", vim.lsp.buf.format, {
   desc = "Format file"
 })
 
